@@ -5,3 +5,10 @@ c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitn
 c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\obj\Debug\TddWithFitnesse.Acceptance.pdb
 c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\fit.dll
 c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\fitSharp.dll
+C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\TddWithFitnesse.Acceptance.dll
+C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\TddWithFitnesse.Acceptance.pdb
+C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\fit.dll
+C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\fitSharp.dll
+C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse.Acceptance\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse.Acceptance\obj\Debug\TddWithFitnesse.Acceptance.dll
+C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse.Acceptance\obj\Debug\TddWithFitnesse.Acceptance.pdb

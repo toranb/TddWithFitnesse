@@ -5,7 +5,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddWithFitnesse", "TddWithF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddWithFitnesse.Acceptance", "TddWithFitnesse.Acceptance\TddWithFitnesse.Acceptance.csproj", "{2EF91E9B-2B10-4C32-8486-17A367E88025}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddWithFitnesse.Test", "TddWithFitnesse.Test\TddWithFitnesse.Test.csproj", "{05A10920-9947-43AC-AD30-2BC54E2D06FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{014FFA12-46ED-4F0E-B5CA-3A112CED09CB}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		TddWithFitnesse.vsmdi = TddWithFitnesse.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = TddWithFitnesse.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -19,6 +31,10 @@ Global
 		{2EF91E9B-2B10-4C32-8486-17A367E88025}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EF91E9B-2B10-4C32-8486-17A367E88025}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EF91E9B-2B10-4C32-8486-17A367E88025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05A10920-9947-43AC-AD30-2BC54E2D06FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05A10920-9947-43AC-AD30-2BC54E2D06FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05A10920-9947-43AC-AD30-2BC54E2D06FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05A10920-9947-43AC-AD30-2BC54E2D06FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
