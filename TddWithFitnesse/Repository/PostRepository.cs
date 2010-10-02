@@ -12,17 +12,66 @@ namespace TddWithFitnesse.Repository
     public class PostRepository
     {
         private string connectionString = @"server=core2duo\SQLEXPRESS;DATABASE=dsmtbillup;Trusted_Connection=Yes";
+        private SqlConnection connection;
+        private SqlTransaction transaction;
+        private SqlConnection internalConnection;
+        private SqlTransaction internalTransaction;
+
+        public PostRepository() { }
+
+        public PostRepository(SqlConnection connection, SqlTransaction transaction)
+        {
+            this.connection = connection;
+            this.transaction = transaction;
+        }
+
+        private SqlTransaction GetSqlTransaction()
+        {
+            if (transaction == null)
+            {
+                if (internalTransaction == null)
+                {
+                    internalTransaction = GetSqlConnection().BeginTransaction();
+                }
+                return internalTransaction;
+            }
+
+            return transaction;
+        }
+
+        private SqlConnection GetSqlConnection()
+        {
+            if (connection == null)
+            {
+                if (internalConnection == null)
+                {
+                    internalConnection = new SqlConnection(connectionString);
+                    internalConnection.Open();
+                }
+                return internalConnection;
+            }
+
+            return connection;
+        }
+
+        private void CommitTransactionWhenSqlConnectionIsOpen()
+        {
+            if (transaction == null)
+            {
+                internalTransaction.Commit();
+            }
+        }
 
         public Post GetPostByUri(string uri)
         {
             var post = new Post();
 
-            using (var cmd = new SqlConnection().CreateCommand())
+            using (var cmd = GetSqlConnection().CreateCommand())
             {
                 cmd.Parameters.Add(new SqlParameter("@uri",SqlDbType.VarChar) { Value = uri });
                 cmd.CommandText = "select id, title, content, uri from posts where uri = @uri";
-                cmd.Connection = new SqlConnection(connectionString);
-                cmd.Connection.Open();
+                cmd.Connection = GetSqlConnection();
+                cmd.Transaction = GetSqlTransaction();
 
                 BuildPostObject(post, cmd);
             }
@@ -47,18 +96,20 @@ namespace TddWithFitnesse.Repository
         public void InsertPost(Post post)
         {
             var identityValue = BuildIdentityValueParameter();
-            using (SqlCommand cmd = new SqlConnection().CreateCommand())
+            using (SqlCommand cmd = GetSqlConnection().CreateCommand())
             {
                 cmd.Parameters.Add(identityValue);
                 AddParameterValuesForInsert(cmd, post);
                 cmd.CommandText = BuildInsertSql(post);
-                cmd.Connection = new SqlConnection(connectionString);
-                cmd.Connection.Open();
+                cmd.Connection = GetSqlConnection();
+                cmd.Transaction = GetSqlTransaction();
 
                 cmd.ExecuteNonQuery();
 
                 post.ID = (int)identityValue.Value;
             }
+
+            CommitTransactionWhenSqlConnectionIsOpen();
         }
 
         private string BuildInsertSql(Post post)
