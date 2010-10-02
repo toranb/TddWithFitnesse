@@ -1,0 +1,7 @@
+c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\TddWithFitnesse.Acceptance.dll
+c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\TddWithFitnesse.Acceptance.pdb
+c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\obj\Debug\ResolveAssemblyReference.cache
+c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\obj\Debug\TddWithFitnesse.Acceptance.dll
+c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\obj\Debug\TddWithFitnesse.Acceptance.pdb
+c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\fit.dll
+c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\fitSharp.dll

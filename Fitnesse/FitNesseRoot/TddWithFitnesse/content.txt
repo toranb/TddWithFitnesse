@@ -1,0 +1,6 @@
+!define COMMAND_PATTERN {%m -r fitnesse.fitserver.FitServer,fitsharp\fit.dll %p}
+
+!define TEST_RUNNER {fitsharp\Runner.exe}
+!path C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\TddWithFitnesse.Acceptance.dll
+
+!contents
