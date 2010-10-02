@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using fit;
+using TddWithFitnesse.Models;
+using TddWithFitnesse.Controllers;
+using System.Web.Mvc;
 
 namespace TddWithFitnesse.Acceptance
 {
@@ -12,7 +15,15 @@ namespace TddWithFitnesse.Acceptance
 
         public bool Create()
         {
-            return false;
+            var post = new Post { Title = title, Content = content, Uri = uri };
+
+            var controller = new PostController();
+
+            var result = controller.CreatePost(post) as ViewResult;
+
+            var createdPost = (Post) result.ViewData.Model;
+
+            return createdPost.ID > 0;
         }
     }
 }

@@ -1,6 +1,6 @@
 !3 !-fit-!
-|'''Date: '''|!-7:42:52 PM (CDT) on Monday, August 9, 2010-!|
+|'''Date: '''|!-10:23:54 AM (CDT) on Sunday, August 15, 2010-!|
 |'''Test Page: '''|.TddWithFitnesse.RetrievePost|
-|'''Command: '''|!-fitsharp\Runner.exe -r fitnesse.fitserver.FitServer,fitsharp\fit.dll "C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\TddWithFitnesse.Acceptance.dll" core2duo 8081 2-!|
-|'''Exit code: '''|!-2-!|
-|'''Time elapsed: '''|!-0.312 seconds-!|
+|'''Command: '''|!-fitsharp\Runner.exe -r fitnesse.fitserver.FitServer,fitsharp\fit.dll "C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\TddWithFitnesse.Acceptance.dll" Core2Duo 8081 3-!|
+|'''Exit code: '''|!-0-!|
+|'''Time elapsed: '''|!-2.045 seconds-!|

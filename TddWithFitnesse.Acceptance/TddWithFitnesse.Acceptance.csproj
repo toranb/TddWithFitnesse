@@ -39,6 +39,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -50,6 +51,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RetrievePost.cs" />
     <Compile Include="RetrievePostByUriColumnFixture.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TddWithFitnesse\TddWithFitnesse.csproj">
+      <Project>{38723129-8F22-431A-BD20-8B54C9145F51}</Project>
+      <Name>TddWithFitnesse</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

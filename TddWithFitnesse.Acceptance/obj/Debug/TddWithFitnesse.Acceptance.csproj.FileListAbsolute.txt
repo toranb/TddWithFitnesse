@@ -5,3 +5,5 @@ c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitn
 c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\obj\Debug\TddWithFitnesse.Acceptance.pdb
 c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\fit.dll
 c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\fitSharp.dll
+C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\TddWithFitnesse.dll
+C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Acceptance\bin\Debug\TddWithFitnesse.pdb

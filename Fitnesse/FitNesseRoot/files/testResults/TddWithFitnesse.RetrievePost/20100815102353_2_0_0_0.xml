@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>RetrievePost</rootPath>
+    <result>
+    <counts>
+      <right>2</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<table border="1" cellspacing="0">
+<tr><td>Retrieve Post</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="4">Given Post With Valid Uri</td>
+</tr>
+<tr><td>Title</td>
+<td>Content</td>
+<td>Uri</td>
+<td>Create!</td>
+</tr>
+<tr><td>Test</td>
+<td>empty</td>
+<td>archive/2009/01/01/hello</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="4">Retrieve Post By Uri</td>
+</tr>
+<tr><td>Title</td>
+<td>Content</td>
+<td>Uri</td>
+<td>Found!</td>
+</tr>
+<tr><td>Test</td>
+<td>empty</td>
+<td>archive/2009/01/01/hello</td>
+<td class="pass">true</td>
+</tr>
+</table>
+]]></content>
+    <relativePageName>RetrievePost</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+
