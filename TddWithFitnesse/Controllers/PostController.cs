@@ -27,5 +27,12 @@ namespace TddWithFitnesse.Controllers
 
             return View("CreatePost", post);
         }
+
+        public ViewResult RetrievePostByUri(string uri)
+        {
+            var post = repository.GetPostByUri(uri);
+
+            return View("GetPostByUri", post);
+        }
     }
 }
