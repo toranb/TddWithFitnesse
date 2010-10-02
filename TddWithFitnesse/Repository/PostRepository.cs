@@ -9,7 +9,7 @@ using System.Text;
 
 namespace TddWithFitnesse.Repository
 {
-    public class PostRepository : BaseRepository<Post>
+    public class PostRepository : BaseRepository<Post>, TddWithFitnesse.Repository.IPostRepository
     {
         public PostRepository() { }
 

@@ -5,3 +5,6 @@ C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitn
 C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Test\obj\Debug\TddWithFitnesse.Test.pdb
 C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Test\bin\Debug\TddWithFitnesse.dll
 C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Test\bin\Debug\TddWithFitnesse.pdb
+C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Test\bin\Debug\Moq.dll
+C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Test\bin\Debug\Moq.pdb
+C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Test\bin\Debug\Moq.xml

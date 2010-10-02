@@ -12,11 +12,11 @@ namespace TddWithFitnesse.Controllers
 {
     public class PostController : Controller
     {
-        private PostRepository repository;
+        private IPostRepository repository;
 
         public PostController() : this(new PostRepository()) { }
 
-        public PostController(PostRepository repository) 
+        public PostController(IPostRepository repository) 
         {
             this.repository = repository;
         }

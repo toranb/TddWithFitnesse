@@ -7,7 +7,7 @@ using TddWithFitnesse.Controllers;
 using System.Web.Mvc;
 using TddWithFitnesse.Models;
 using TddWithFitnesse.Repository;
-using TddWithFitnesse.Test.FakeObjects;
+using Moq;
 
 namespace TddWithFitnesse.Test
 {
@@ -17,10 +17,11 @@ namespace TddWithFitnesse.Test
         [TestMethod]
         public void RetrievePostWithValidUri()
         {
-            var fakePostRepository = new FakePostRepository();
-            var controller = new PostController(fakePostRepository);
+            var fakePostRepository = new Mock<IPostRepository>();
+            var controller = new PostController(fakePostRepository.Object);
 
             var post = new Post() { Title = "test", Content = "empty", Uri = "archive/2009/01/01/hello" };
+            fakePostRepository.Setup(x => x.GetPostByUri(post.Uri)).Returns(post);
 
             var result = controller.RetrievePostByUri(post.Uri) as ViewResult;
 
@@ -29,7 +30,7 @@ namespace TddWithFitnesse.Test
             Assert.AreEqual(persistedPost.Title, post.Title);
             Assert.AreEqual(persistedPost.Content, post.Content);
             Assert.AreEqual(persistedPost.Uri, post.Uri);
-            Assert.IsTrue(fakePostRepository.retrieveWasCalled);
+            fakePostRepository.Verify(x => x.GetPostByUri(post.Uri));
         }
     }
 }
