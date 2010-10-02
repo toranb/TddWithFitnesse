@@ -9,77 +9,21 @@ using System.Text;
 
 namespace TddWithFitnesse.Repository
 {
-    public class PostRepository
+    public class PostRepository : BaseRepository<Post>
     {
-        private string connectionString = @"server=core2duo\SQLEXPRESS;DATABASE=dsmtbillup;Trusted_Connection=Yes";
-        private SqlConnection connection;
-        private SqlTransaction transaction;
-        private SqlConnection internalConnection;
-        private SqlTransaction internalTransaction;
-
         public PostRepository() { }
 
-        public PostRepository(SqlConnection connection, SqlTransaction transaction)
-        {
-            this.connection = connection;
-            this.transaction = transaction;
-        }
-
-        private SqlTransaction GetSqlTransaction()
-        {
-            if (transaction == null)
-            {
-                if (internalTransaction == null)
-                {
-                    internalTransaction = GetSqlConnection().BeginTransaction();
-                }
-                return internalTransaction;
-            }
-
-            return transaction;
-        }
-
-        private SqlConnection GetSqlConnection()
-        {
-            if (connection == null)
-            {
-                if (internalConnection == null)
-                {
-                    internalConnection = new SqlConnection(connectionString);
-                    internalConnection.Open();
-                }
-                return internalConnection;
-            }
-
-            return connection;
-        }
-
-        private void CommitTransactionWhenSqlConnectionIsOpen()
-        {
-            if (transaction == null)
-            {
-                internalTransaction.Commit();
-            }
-        }
+        public PostRepository(SqlConnection connection, SqlTransaction transaction) : base(connection, transaction) {}
 
         public Post GetPostByUri(string uri)
         {
-            var post = new Post();
-
-            using (var cmd = GetSqlConnection().CreateCommand())
-            {
-                cmd.Parameters.Add(new SqlParameter("@uri",SqlDbType.VarChar) { Value = uri });
-                cmd.CommandText = "select id, title, content, uri from posts where uri = @uri";
-                cmd.Connection = GetSqlConnection();
-                cmd.Transaction = GetSqlTransaction();
-
-                BuildPostObject(post, cmd);
-            }
-            return post;
+            var param = new SqlParameter("@uri", SqlDbType.VarChar) { Value = uri };
+            return ExecuteReader("select id, title, content, uri from posts where uri = @uri", param);
         }
 
-        private void BuildPostObject(Post post, SqlCommand cmd)
+        public override Post BuildEntity(SqlCommand cmd)
         {
+            var post = new Post();
             using (var reader = cmd.ExecuteReader())
             {
                 if (reader != null)
@@ -91,25 +35,13 @@ namespace TddWithFitnesse.Repository
                         post.Content = Convert.ToString(reader["Content"]);
                     }
             }
+
+            return post;
         }
 
         public void InsertPost(Post post)
         {
-            var identityValue = BuildIdentityValueParameter();
-            using (SqlCommand cmd = GetSqlConnection().CreateCommand())
-            {
-                cmd.Parameters.Add(identityValue);
-                AddParameterValuesForInsert(cmd, post);
-                cmd.CommandText = BuildInsertSql(post);
-                cmd.Connection = GetSqlConnection();
-                cmd.Transaction = GetSqlTransaction();
-
-                cmd.ExecuteNonQuery();
-
-                post.ID = (int)identityValue.Value;
-            }
-
-            CommitTransactionWhenSqlConnectionIsOpen();
+            post.ID = ExecuteNonQueryWithReturnValue(BuildInsertSql(post), BuildParameterListForInsert(post));
         }
 
         private string BuildInsertSql(Post post)
@@ -121,16 +53,15 @@ namespace TddWithFitnesse.Repository
             return insertSql.ToString();
         }
 
-        private void AddParameterValuesForInsert(SqlCommand cmd, Post post)
+        private List<SqlParameter> BuildParameterListForInsert(Post post)
         {
-            cmd.Parameters.Add(new SqlParameter("@title", SqlDbType.VarChar) { Value = post.Title });
-            cmd.Parameters.Add(new SqlParameter("@content", SqlDbType.VarChar) { Value = post.Content });
-            cmd.Parameters.Add(new SqlParameter("@uri", SqlDbType.VarChar) { Value = post.Uri });
-        }
+            var paramList = new List<SqlParameter>();
+            paramList.Add(new SqlParameter("@PostID", SqlDbType.Int) { Direction = ParameterDirection.Output });
+            paramList.Add(new SqlParameter("@title", SqlDbType.VarChar) { Value = post.Title });
+            paramList.Add(new SqlParameter("@content", SqlDbType.VarChar) { Value = post.Content });
+            paramList.Add(new SqlParameter("@uri", SqlDbType.VarChar) { Value = post.Uri });
 
-        private SqlParameter BuildIdentityValueParameter()
-        {
-            return new SqlParameter("@PostID", SqlDbType.Int) { Direction = ParameterDirection.Output };
+            return paramList;
         }
     }
 }
