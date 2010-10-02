@@ -5,10 +5,3 @@ C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitn
 C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Test\obj\Debug\TddWithFitnesse.Test.pdb
 C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Test\bin\Debug\TddWithFitnesse.dll
 C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Test\bin\Debug\TddWithFitnesse.pdb
-C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse.Test\bin\Debug\TddWithFitnesse.Test.dll
-C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse.Test\bin\Debug\TddWithFitnesse.Test.pdb
-C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse.Test\bin\Debug\TddWithFitnesse.dll
-C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse.Test\bin\Debug\TddWithFitnesse.pdb
-C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse.Test\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse.Test\obj\Debug\TddWithFitnesse.Test.dll
-C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse.Test\obj\Debug\TddWithFitnesse.Test.pdb

@@ -3,8 +3,3 @@ c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitn
 c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse\obj\Debug\ResolveAssemblyReference.cache
 c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse\obj\Debug\TddWithFitnesse.dll
 c:\users\toran\documents\visual studio 2010\Projects\TddWithFitnesse\TddWithFitnesse\obj\Debug\TddWithFitnesse.pdb
-C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse\bin\TddWithFitnesse.dll
-C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse\bin\TddWithFitnesse.pdb
-C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse\obj\Debug\TddWithFitnesse.dll
-C:\Users\Toran\Desktop\TddWithFitnesse2\TddWithFitnesse\TddWithFitnesse\obj\Debug\TddWithFitnesse.pdb
