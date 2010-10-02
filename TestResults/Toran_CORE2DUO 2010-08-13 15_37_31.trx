@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="480d56b5-f9d4-47d3-80a7-e37961b08649" name="Toran@CORE2DUO 2010-08-13 15:37:31" runUser="core2duo\Toran" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="f22839a5-96ad-4c4e-931c-a066f5829364">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Toran_CORE2DUO 2010-08-13 15_37_31">
+      <DeploymentItem filename="C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\dependencies\Moq.dll" />
+      <DeploymentItem filename="C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse\bin\TddWithFitnesse.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-08-13T15:37:31.6582706-05:00" queuing="2010-08-13T15:37:31.7612765-05:00" start="2010-08-13T15:37:31.7712770-05:00" finish="2010-08-13T15:37:32.1983015-05:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="WhenUriIsNotFoundReturnNewPostObject" storage="c:\users\toran\documents\visual studio 2010\projects\tddwithfitnesse\tddwithfitnesse.test\bin\debug\tddwithfitnesse.test.dll" id="39d53a3e-4dd1-febb-2629-439ac1ee83ed">
+      <Execution id="54d48a03-54c9-49d4-9691-4185851bc5e8" />
+      <TestMethod codeBase="C:/Users/Toran/Documents/Visual Studio 2010/Projects/TddWithFitnesse/TddWithFitnesse.Test/bin/Debug/TddWithFitnesse.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TddWithFitnesse.Test.RetrievePostControllerTest, TddWithFitnesse.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="WhenUriIsNotFoundReturnNewPostObject" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="39d53a3e-4dd1-febb-2629-439ac1ee83ed" executionId="54d48a03-54c9-49d4-9691-4185851bc5e8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="54d48a03-54c9-49d4-9691-4185851bc5e8" testId="39d53a3e-4dd1-febb-2629-439ac1ee83ed" testName="WhenUriIsNotFoundReturnNewPostObject" computerName="CORE2DUO" duration="00:00:00.1125372" startTime="2010-08-13T15:37:31.7862779-05:00" endTime="2010-08-13T15:37:32.1342978-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="54d48a03-54c9-49d4-9691-4185851bc5e8">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TddWithFitnesse.Test.RetrievePostControllerTest.WhenUriIsNotFoundReturnNewPostObject threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.</Message>
+          <StackTrace>    at TddWithFitnesse.Test.RetrievePostControllerTest.WhenUriIsNotFoundReturnNewPostObject() in C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse.Test\RetrievePostControllerTest.cs:line 52
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

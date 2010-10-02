@@ -14,17 +14,31 @@ namespace TddWithFitnesse.Test
     [TestClass]
     public class CreatePostControllerTest
     {
+        private Mock<IPostRepository> fakePostRepository;
+        private PostController controller;
+
+        [TestInitialize]
+        public void Setup()
+        {
+            fakePostRepository = new Mock<IPostRepository>();
+            controller = new PostController(fakePostRepository.Object);
+        }
+
         [TestMethod]
         public void CreatePostIsSuccessfulWithValidData()
         {
-            var fakePostRepository = new Mock<IPostRepository>();
-            var controller = new PostController(fakePostRepository.Object);
-
             var post = new Post() { Title = "test", Content = "empty", Uri = "archive/2009/01/01/hello" };
 
             var result = controller.CreatePost(post) as ViewResult;
 
             fakePostRepository.Verify(x => x.InsertPost(post));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException), "invalid post")]
+        public void WhenPostParamIsNullThrowException()
+        {
+            var result = controller.CreatePost(null);
         }
     }
 }
