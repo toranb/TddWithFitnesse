@@ -6,6 +6,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TddWithFitnesse.Controllers;
 using System.Web.Mvc;
 using TddWithFitnesse.Models;
+using TddWithFitnesse.Repository;
+using TddWithFitnesse.Test.FakeObjects;
 
 namespace TddWithFitnesse.Test
 {
@@ -15,7 +17,8 @@ namespace TddWithFitnesse.Test
         [TestMethod]
         public void RetrievePostWithValidUri()
         {
-            var controller = new PostController();
+            var fakePostRepository = new FakePostRepository();
+            var controller = new PostController(fakePostRepository);
 
             var post = new Post() { Title = "test", Content = "empty", Uri = "archive/2009/01/01/hello" };
 
@@ -26,7 +29,7 @@ namespace TddWithFitnesse.Test
             Assert.AreEqual(persistedPost.Title, post.Title);
             Assert.AreEqual(persistedPost.Content, post.Content);
             Assert.AreEqual(persistedPost.Uri, post.Uri);
-
+            Assert.IsTrue(fakePostRepository.retrieveWasCalled);
         }
     }
 }

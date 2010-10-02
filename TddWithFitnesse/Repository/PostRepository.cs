@@ -15,7 +15,7 @@ namespace TddWithFitnesse.Repository
 
         public PostRepository(SqlConnection connection, SqlTransaction transaction) : base(connection, transaction) {}
 
-        public Post GetPostByUri(string uri)
+        public virtual Post GetPostByUri(string uri)
         {
             var param = new SqlParameter("@uri", SqlDbType.VarChar) { Value = uri };
             return ExecuteReader("select id, title, content, uri from posts where uri = @uri", param);
@@ -39,7 +39,7 @@ namespace TddWithFitnesse.Repository
             return post;
         }
 
-        public void InsertPost(Post post)
+        public virtual void InsertPost(Post post)
         {
             post.ID = ExecuteNonQueryWithReturnValue(BuildInsertSql(post), BuildParameterListForInsert(post));
         }

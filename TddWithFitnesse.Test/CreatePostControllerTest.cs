@@ -6,6 +6,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Web.Mvc;
 using TddWithFitnesse.Controllers;
 using TddWithFitnesse.Models;
+using TddWithFitnesse.Repository;
+using TddWithFitnesse.Test.FakeObjects;
 
 namespace TddWithFitnesse.Test
 {
@@ -15,15 +17,14 @@ namespace TddWithFitnesse.Test
         [TestMethod]
         public void CreatePostIsSuccessfulWithValidData()
         {
-            var controller = new PostController();
+            var fakePostRepository = new FakePostRepository();
+            var controller = new PostController(fakePostRepository);
 
             var post = new Post() { Title = "test", Content = "empty", Uri = "archive/2009/01/01/hello" };
 
             var result = controller.CreatePost(post) as ViewResult;
 
-            var insertedPost = (Post) result.ViewData.Model;
-
-            Assert.IsTrue(insertedPost.ID > 0);
+            Assert.IsTrue(fakePostRepository.insertWasCalled);
         }
     }
 }
