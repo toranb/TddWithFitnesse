@@ -1,5 +1,7 @@
 | Retrieve Post |
 
+!include .IncludePersistence.BeginTest
+
 | Given Post With Valid Uri|
 | Title  | Content   | Uri                      | Create! |
 | Test   | empty     | archive/2009/01/01/hello | true    |
@@ -7,3 +9,5 @@
 | Retrieve Post By Uri |
 | Title  | Content   | Uri                      | Found! |
 | Test   | empty     | archive/2009/01/01/hello | true    |
+
+!include .IncludePersistence.EndTest

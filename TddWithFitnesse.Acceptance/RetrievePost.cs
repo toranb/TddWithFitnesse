@@ -5,7 +5,7 @@ using System.Text;
 using fit;
 using TddWithFitnesse.Acceptance;
 
-public class RetrievePost
+public class RetrievePost : AdoDoFixture
 {
     public ColumnFixture GivenPostWithValidUri()
     {

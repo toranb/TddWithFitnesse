@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="079f67e2-6a99-49d7-aadd-e40f487a8080" name="Toran@CORE2DUO 2010-08-15 11:00:03" runUser="Core2Duo\Toran" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="f22839a5-96ad-4c4e-931c-a066f5829364">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Toran_CORE2DUO 2010-08-15 11_00_03">
+      <DeploymentItem filename="C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\dependencies\Moq.dll" />
+      <DeploymentItem filename="C:\Users\Toran\Documents\Visual Studio 2010\Projects\TddWithFitnesse\TddWithFitnesse\bin\TddWithFitnesse.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-08-15T11:00:03.4969423-05:00" queuing="2010-08-15T11:00:03.5149433-05:00" start="2010-08-15T11:00:03.5439450-05:00" finish="2010-08-15T11:00:04.0519741-05:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="6" executed="6" passed="6" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ShouldCreateAndRetrievePost" storage="c:\users\toran\documents\visual studio 2010\projects\tddwithfitnesse\tddwithfitnesse.test\bin\debug\tddwithfitnesse.test.dll" id="ec9202a5-d30c-4b59-73bd-df98cce1f29d">
+      <Execution id="c7234f58-3018-4af4-a64a-5793cab98574" />
+      <TestMethod codeBase="C:/Users/Toran/Documents/Visual Studio 2010/Projects/TddWithFitnesse/TddWithFitnesse.Test/bin/Debug/TddWithFitnesse.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TddWithFitnesse.Test.PostRepositoryTest, TddWithFitnesse.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ShouldCreateAndRetrievePost" />
+    </UnitTest>
+    <UnitTest name="WhenUriParamIsNullThrowException" storage="c:\users\toran\documents\visual studio 2010\projects\tddwithfitnesse\tddwithfitnesse.test\bin\debug\tddwithfitnesse.test.dll" id="5ede6bc8-d55d-8ea8-81a5-c3e3c6386594">
+      <Execution id="415b8fb5-1ce4-4274-a97b-f4bc72464f43" />
+      <TestMethod codeBase="C:/Users/Toran/Documents/Visual Studio 2010/Projects/TddWithFitnesse/TddWithFitnesse.Test/bin/Debug/TddWithFitnesse.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TddWithFitnesse.Test.RetrievePostControllerTest, TddWithFitnesse.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="WhenUriParamIsNullThrowException" />
+    </UnitTest>
+    <UnitTest name="CreatePostIsSuccessfulWithValidData" storage="c:\users\toran\documents\visual studio 2010\projects\tddwithfitnesse\tddwithfitnesse.test\bin\debug\tddwithfitnesse.test.dll" id="b0742137-1ce2-8da9-e496-7112edf018ab">
+      <Execution id="3486d4c8-9833-4d1f-981d-dd710824fdc6" />
+      <TestMethod codeBase="C:/Users/Toran/Documents/Visual Studio 2010/Projects/TddWithFitnesse/TddWithFitnesse.Test/bin/Debug/TddWithFitnesse.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TddWithFitnesse.Test.CreatePostControllerTest, TddWithFitnesse.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CreatePostIsSuccessfulWithValidData" />
+    </UnitTest>
+    <UnitTest name="RetrievePostWithValidUri" storage="c:\users\toran\documents\visual studio 2010\projects\tddwithfitnesse\tddwithfitnesse.test\bin\debug\tddwithfitnesse.test.dll" id="cb98ea02-c30b-96d3-1aac-5980b064eca1">
+      <Execution id="5204b71b-81f4-4505-86f8-9bb3b0ea6352" />
+      <TestMethod codeBase="C:/Users/Toran/Documents/Visual Studio 2010/Projects/TddWithFitnesse/TddWithFitnesse.Test/bin/Debug/TddWithFitnesse.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TddWithFitnesse.Test.RetrievePostControllerTest, TddWithFitnesse.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RetrievePostWithValidUri" />
+    </UnitTest>
+    <UnitTest name="WhenUriIsNotFoundReturnNewPostObject" storage="c:\users\toran\documents\visual studio 2010\projects\tddwithfitnesse\tddwithfitnesse.test\bin\debug\tddwithfitnesse.test.dll" id="39d53a3e-4dd1-febb-2629-439ac1ee83ed">
+      <Execution id="8551a5f5-7dc0-4f3b-9287-212cc89f96db" />
+      <TestMethod codeBase="C:/Users/Toran/Documents/Visual Studio 2010/Projects/TddWithFitnesse/TddWithFitnesse.Test/bin/Debug/TddWithFitnesse.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TddWithFitnesse.Test.RetrievePostControllerTest, TddWithFitnesse.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="WhenUriIsNotFoundReturnNewPostObject" />
+    </UnitTest>
+    <UnitTest name="WhenPostParamIsNullThrowException" storage="c:\users\toran\documents\visual studio 2010\projects\tddwithfitnesse\tddwithfitnesse.test\bin\debug\tddwithfitnesse.test.dll" id="429b76a6-6b33-4b95-29be-4a1eda9958da">
+      <Execution id="f6ad0bb3-6315-4c95-991d-d4da937d7ece" />
+      <TestMethod codeBase="C:/Users/Toran/Documents/Visual Studio 2010/Projects/TddWithFitnesse/TddWithFitnesse.Test/bin/Debug/TddWithFitnesse.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TddWithFitnesse.Test.CreatePostControllerTest, TddWithFitnesse.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="WhenPostParamIsNullThrowException" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="39d53a3e-4dd1-febb-2629-439ac1ee83ed" executionId="8551a5f5-7dc0-4f3b-9287-212cc89f96db" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="429b76a6-6b33-4b95-29be-4a1eda9958da" executionId="f6ad0bb3-6315-4c95-991d-d4da937d7ece" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5ede6bc8-d55d-8ea8-81a5-c3e3c6386594" executionId="415b8fb5-1ce4-4274-a97b-f4bc72464f43" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b0742137-1ce2-8da9-e496-7112edf018ab" executionId="3486d4c8-9833-4d1f-981d-dd710824fdc6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb98ea02-c30b-96d3-1aac-5980b064eca1" executionId="5204b71b-81f4-4505-86f8-9bb3b0ea6352" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ec9202a5-d30c-4b59-73bd-df98cce1f29d" executionId="c7234f58-3018-4af4-a64a-5793cab98574" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="8551a5f5-7dc0-4f3b-9287-212cc89f96db" testId="39d53a3e-4dd1-febb-2629-439ac1ee83ed" testName="WhenUriIsNotFoundReturnNewPostObject" computerName="CORE2DUO" duration="00:00:00.2169860" startTime="2010-08-15T11:00:03.5449451-05:00" endTime="2010-08-15T11:00:03.9149662-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8551a5f5-7dc0-4f3b-9287-212cc89f96db">
+    </UnitTestResult>
+    <UnitTestResult executionId="f6ad0bb3-6315-4c95-991d-d4da937d7ece" testId="429b76a6-6b33-4b95-29be-4a1eda9958da" testName="WhenPostParamIsNullThrowException" computerName="CORE2DUO" duration="00:00:00.0030937" startTime="2010-08-15T11:00:03.9169663-05:00" endTime="2010-08-15T11:00:03.9309671-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f6ad0bb3-6315-4c95-991d-d4da937d7ece">
+    </UnitTestResult>
+    <UnitTestResult executionId="415b8fb5-1ce4-4274-a97b-f4bc72464f43" testId="5ede6bc8-d55d-8ea8-81a5-c3e3c6386594" testName="WhenUriParamIsNullThrowException" computerName="CORE2DUO" duration="00:00:00.0008771" startTime="2010-08-15T11:00:03.9379675-05:00" endTime="2010-08-15T11:00:03.9489682-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="415b8fb5-1ce4-4274-a97b-f4bc72464f43">
+    </UnitTestResult>
+    <UnitTestResult executionId="3486d4c8-9833-4d1f-981d-dd710824fdc6" testId="b0742137-1ce2-8da9-e496-7112edf018ab" testName="CreatePostIsSuccessfulWithValidData" computerName="CORE2DUO" duration="00:00:00.0082706" startTime="2010-08-15T11:00:03.9509683-05:00" endTime="2010-08-15T11:00:03.9679693-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3486d4c8-9833-4d1f-981d-dd710824fdc6">
+    </UnitTestResult>
+    <UnitTestResult executionId="5204b71b-81f4-4505-86f8-9bb3b0ea6352" testId="cb98ea02-c30b-96d3-1aac-5980b064eca1" testName="RetrievePostWithValidUri" computerName="CORE2DUO" duration="00:00:00.0043187" startTime="2010-08-15T11:00:03.9709694-05:00" endTime="2010-08-15T11:00:03.9819701-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5204b71b-81f4-4505-86f8-9bb3b0ea6352">
+    </UnitTestResult>
+    <UnitTestResult executionId="c7234f58-3018-4af4-a64a-5793cab98574" testId="ec9202a5-d30c-4b59-73bd-df98cce1f29d" testName="ShouldCreateAndRetrievePost" computerName="CORE2DUO" duration="00:00:00.0102466" startTime="2010-08-15T11:00:03.9879704-05:00" endTime="2010-08-15T11:00:04.0059714-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c7234f58-3018-4af4-a64a-5793cab98574">
+    </UnitTestResult>
+  </Results>
+</TestRun>

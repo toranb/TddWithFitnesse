@@ -1,0 +1,2 @@
+!|TddWithFitnesse.Acceptance.AdoDoFixture|
+|EndTransaction|

@@ -4,60 +4,31 @@ using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 using System.Data;
+using TddWithFitnesse.TransactionHelper;
 
 namespace TddWithFitnesse.Repository
 {
     public abstract class BaseRepository<T> where T : class
     {
-        private string connectionString = @"server=core2duo\SQLEXPRESS;DATABASE=dsmtbillup;Trusted_Connection=Yes";
-        private SqlConnection connection;
-        private SqlTransaction transaction;
-        private SqlConnection internalConnection;
-        private SqlTransaction internalTransaction;
+        private SqlConnection Connection;
+        private SqlTransaction Transaction;
 
         public BaseRepository() { }
 
         public BaseRepository(SqlConnection connection, SqlTransaction transaction)
         {
-            this.connection = connection;
-            this.transaction = transaction;
+            Connection = connection;
+            Transaction = transaction;
         }
 
         protected SqlTransaction GetSqlTransaction()
         {
-            if (transaction == null)
-            {
-                if (internalTransaction == null)
-                {
-                    internalTransaction = GetSqlConnection().BeginTransaction();
-                }
-                return internalTransaction;
-            }
-
-            return transaction;
+            return Transaction == null ? (SqlTransaction)CommonSessionManager.Transaction : Transaction;
         }
 
         protected SqlConnection GetSqlConnection()
         {
-            if (connection == null)
-            {
-                if (internalConnection == null)
-                {
-                    internalConnection = new SqlConnection(connectionString);
-                    internalConnection.Open();
-                }
-                return internalConnection;
-            }
-
-            return connection;
-        }
-
-        protected void CommitTransactionWhenSqlConnectionIsOpen()
-        {
-            if (transaction == null)
-            {
-                internalTransaction.Commit();
-            }
+            return Connection == null ? (SqlConnection)CommonSessionManager.Connection : Connection;
         }
 
         public abstract T BuildEntity(SqlCommand cmd);
@@ -88,8 +59,6 @@ namespace TddWithFitnesse.Repository
                 cmd.Transaction = GetSqlTransaction();
 
                 cmd.ExecuteNonQuery();
-
-                CommitTransactionWhenSqlConnectionIsOpen();
 
                 return (int)paramList[0].Value;
             }

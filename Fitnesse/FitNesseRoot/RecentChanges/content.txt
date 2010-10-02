@@ -1,2 +1,5 @@
-|TddWithFitnesse.RetrievePost||10:22:03 Tue, Aug 03, 2010|
+|TddWithFitnesse.RetrievePost||11:02:47 Sun, Aug 15, 2010|
+|IncludePersistence.EndTest||10:54:59 Sun, Aug 15, 2010|
+|IncludePersistence.BeginTest||10:54:42 Sun, Aug 15, 2010|
+|IncludePersistence||10:53:48 Sun, Aug 15, 2010|
 |TddWithFitnesse||10:18:03 Tue, Aug 03, 2010|

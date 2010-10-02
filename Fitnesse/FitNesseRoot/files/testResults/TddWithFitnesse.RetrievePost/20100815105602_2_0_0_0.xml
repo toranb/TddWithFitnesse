@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20100303</FitNesseVersion>
+  <rootPath>RetrievePost</rootPath>
+    <result>
+    <counts>
+      <right>2</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <content><![CDATA[<table border="1" cellspacing="0">
+<tr><td>Retrieve Post</td>
+</tr>
+</table>
+<br/><div class="included">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('1465429159497851122');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img1465429159497851122"/>
+	</a>
+&nbsp;<span class="meta">Included page: <a href="IncludePersistence.BeginTest">.IncludePersistence.BeginTest</a> <a href="IncludePersistence.BeginTest?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="collapsable" id="1465429159497851122"><table border="1" cellspacing="0">
+<tr><td>TddWithFitnesse.Acceptance.AdoDoFixture</td>
+</tr>
+<tr><td>StartTransaction</td>
+</tr>
+</table>
+</div>
+</div>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="4">Given Post With Valid Uri</td>
+</tr>
+<tr><td>Title</td>
+<td>Content</td>
+<td>Uri</td>
+<td>Create!</td>
+</tr>
+<tr><td>Test</td>
+<td>empty</td>
+<td>archive/2009/01/01/hello</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><table border="1" cellspacing="0">
+<tr><td colspan="4">Retrieve Post By Uri</td>
+</tr>
+<tr><td>Title</td>
+<td>Content</td>
+<td>Uri</td>
+<td>Found!</td>
+</tr>
+<tr><td>Test</td>
+<td>empty</td>
+<td>archive/2009/01/01/hello</td>
+<td class="pass">true</td>
+</tr>
+</table>
+<br/><div class="included">
+	<div style="float: right;" class="meta"><a href="javascript:expandAll();">Expand All</a> | <a href="javascript:collapseAll();">Collapse All</a></div>
+	<a href="javascript:toggleCollapsable('-5285126770191385502');">
+		<img src="/files/images/collapsableOpen.gif" class="left" id="img-5285126770191385502"/>
+	</a>
+&nbsp;<span class="meta">Included page: <a href="IncludePersistence.EndTest">.IncludePersistence.EndTest</a> <a href="IncludePersistence.EndTest?edit&amp;redirectToReferer=true&amp;redirectAction=">(edit)</a></span>
+	<div class="collapsable" id="-5285126770191385502"><table border="1" cellspacing="0">
+<tr><td>TddWithFitnesse.Acceptance.AdoDoFixture</td>
+</tr>
+<tr><td>EndTransaction</td>
+</tr>
+</table>
+</div>
+</div>
+]]></content>
+    <relativePageName>RetrievePost</relativePageName>
+    
+    
+    
+  </result>
+  
+  
+  <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  
+</testResults>
+
